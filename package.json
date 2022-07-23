@@ -1,0 +1,21 @@
+{
+  "name": "ksql-streaming-gbfs-data-kafka-kibana-confluent",
+  "version": "1.0.0",
+  "description": "## Overview",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "git add . && git commit -m Build && git push",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BigThinkcode/ksql-streaming-data-pipeline-demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BigThinkcode/ksql-streaming-data-pipeline-demo/issues"
+  },
+  "homepage": "https://github.com/BigThinkcode/ksql-streaming-data-pipeline-demo#readme"
+}
