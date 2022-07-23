@@ -4,7 +4,9 @@
 
 https://github.com/coding-to-music/ksql-streaming-gbfs-data-kafka-kibana-confluent
 
-From / By
+From / By BIGTHINKCODE https://github.com/BigThinkcode
+
+https://github.com/BigThinkcode/ksql-streaming-data-pipeline-demo
 
 ## Environment variables:
 
