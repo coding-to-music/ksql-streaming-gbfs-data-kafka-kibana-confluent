@@ -67,9 +67,8 @@ Stopping zookeeper       ... done
 Stopping elasticsearch   ... done
 ```
 
-## View ksql control center
+## View Confluent Control Center
 
-```
 http://localhost:5601/
 
 http://localhost:8081/
@@ -79,7 +78,6 @@ http://localhost:9021/clusters
 http://localhost:9021/clusters/MliW_WrbRSWsm1l2GEVQRw/overview
 
 http://localhost:9021/clusters/MliW_WrbRSWsm1l2GEVQRw/brokers
-```
 
 ## Getting some errors
 
