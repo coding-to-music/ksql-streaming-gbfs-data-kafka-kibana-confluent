@@ -93,6 +93,16 @@ broker             | [2022-07-26 06:42:51,301] DEBUG [Controller id=1] Topics no
 broker             | [2022-07-26 06:42:51,302] TRACE [Controller id=1] Leader imbalance ratio for broker 1 is 0.0 (kafka.controller.KafkaController)
 ```
 
+## Confluent Control Center Dashboards
+
+![Home](images/control-center-home.png)
+
+![Overview](images/control-center-cluster-overview.png)
+
+![Brokers](images/control-center-brokers.png)
+
+![Consumer Groups](images/control-center-consumer-groups.png)
+
 # Streaming Data Pipeline for visualizing availability in Bike Sharing System (BSS)
 
 ## Overview
