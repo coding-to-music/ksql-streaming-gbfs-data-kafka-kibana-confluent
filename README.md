@@ -26,6 +26,73 @@ git remote add origin git@github.com:coding-to-music/ksql-streaming-gbfs-data-ka
 git push -u origin main
 ```
 
+## docker-compose up
+
+```
+Starting zookeeper     ... done
+Starting elasticsearch ... done
+Starting kibana        ... done
+Starting broker        ... done
+Starting schema-registry ... done
+Starting connect         ... done
+Starting ksqldb-server   ... done
+Starting ksqldb-cli      ... done
+Starting control-center  ... done
+Attaching to elasticsearch, zookeeper, kibana, broker, schema-registry, connect, ksqldb-server, ksqldb-cli, control-center
+broker             | ===> User
+broker             | uid=1000(appuser) gid=1000(appuser) groups=1000(appuser)
+broker             | ===> Configuring ...
+connect            | Installing Connector Plugins
+control-center     | ===> User
+control-center     | uid=1000(appuser) gid=1000(appuser) groups=1000(appuser)
+control-center     | ===> Configuring ...
+ksqldb-server      | ===> User
+ksqldb-server      | uid=1000(appuser) gid=1000(appuser) groups=1000(appuser)
+ksqldb-server      | ===> Configuring ...
+schema-registry    | ===> User
+schema-registry    | uid=1000(appuser) gid=1000(appuser) groups=1000(appuser)
+schema-registry    | ===> Configuring ...
+zookeeper          | ===> User
+zookeeper          | uid=1000(appuser) gid=1000(appuser) groups=1000(appuser)
+zookeeper          | ===> Configuring ...
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping control-center  ... done
+Stopping ksqldb-cli      ... done
+Stopping ksqldb-server   ... done
+Stopping connect         ... done
+Stopping schema-registry ... done
+Stopping broker          ... done
+Stopping kibana          ... done
+Stopping zookeeper       ... done
+Stopping elasticsearch   ... done
+```
+
+## View ksql control center
+
+```
+http://localhost:5601/
+
+http://localhost:8081/
+
+http://localhost:9021/clusters
+
+http://localhost:9021/clusters/MliW_WrbRSWsm1l2GEVQRw/overview
+
+http://localhost:9021/clusters/MliW_WrbRSWsm1l2GEVQRw/brokers
+```
+
+## Getting some errors
+
+```
+schema-registry    | [2022-07-26 06:42:43,813] INFO  - - [26/Jul/2022:06:42:43 +0000] "GET / HTTP/1.1" 200 2  2 (io.confluent.rest-utils.requests)
+control-center     | [2022-07-26 06:42:45,883] WARN misconfigured topic=_confluent-command config=segment.bytes value=1073741824 expected=134217728 (io.confluent.controlcenter.healthcheck.HealthCheck)
+control-center     | [2022-07-26 06:42:45,884] WARN misconfigured topic=_confluent-command config=delete.retention.ms value=86400000 expected=259200000 (io.confluent.controlcenter.healthcheck.HealthCheck)
+broker             | [2022-07-26 06:42:51,299] INFO [Controller id=1] Processing automatic preferred replica leader election (kafka.controller.KafkaController)
+broker             | [2022-07-26 06:42:51,299] TRACE [Controller id=1] Checking need to trigger auto leader balancing (kafka.controller.KafkaController)
+broker             | [2022-07-26 06:42:51,301] DEBUG [Controller id=1] Topics not in preferred replica for broker 1 HashMap() (kafka.controller.KafkaController)
+broker             | [2022-07-26 06:42:51,302] TRACE [Controller id=1] Leader imbalance ratio for broker 1 is 0.0 (kafka.controller.KafkaController)
+```
+
 # Streaming Data Pipeline for visualizing availability in Bike Sharing System (BSS)
 
 ## Overview
